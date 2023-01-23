@@ -3,7 +3,7 @@
 
 const generateExtraChars = (length) => {
     var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*';
     var charactersLength = characters.length;
     for ( var i = 0; i < length; i++ ) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -12,7 +12,7 @@ const generateExtraChars = (length) => {
 }
 
 
-const git push –set-upstream origin = (str) => {
+const mixString = (str) => {
    str = str.split('').sort(() => {
     return Math.floor(Math.random() * (5 - (-5)) + 5) -10;
    }).join('');
