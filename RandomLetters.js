@@ -9,7 +9,7 @@ const passwordBox = document.getElementById("pass-box");
 const minMost = 0;
 const minLen = 8;
 const maxMost = 5;
-const maxLen = 12;
+const maxLen = 16;
 
 const isError = (arr, minMaxL, amountOfPass) => {
   if (amountOfPass < 1 || amountOfPass > 3) {
