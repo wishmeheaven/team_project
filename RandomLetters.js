@@ -74,17 +74,26 @@ const mixString = (str) => {
 
 
 function generatorPassword() {
+  let e = document.querySelectorAll("p");
+  if(e){
+    e.forEach(element => {
+      element.remove();
+    });
+  }
+  
   const upper = Number(uppercase.value);
   const lower = Number(lowercase.value);
   const nums = Number(numbers.value);
   const symb = Number(symbols.value);
   const len = Number(lengthOfPass.value);
   const numOfPasswords = Number(numberOfPasswords.value);
+  for (let i =0 ;i < numOfPasswords ;i++ ){
   let pass = randomLetter(upper, lower, nums, symb);
   pass += generateExtraChars(len - pass.length);
   pass = mixString(pass);
   const newP = document.createElement("p");
   newP.textContent = pass;
   passwordBox.appendChild(newP);
+}
 }
 
