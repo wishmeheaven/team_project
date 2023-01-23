@@ -46,7 +46,7 @@ https://password-generator-team-project.netlify.app/
 
 ![plot](./images/screen-3.png) 
 
-![plot](./images/screen-4.png) 
+![plot](./images/screen-4.jpg) 
 
 
 ## Deployment
