@@ -1,3 +1,11 @@
+const uppercase = document.getElementById('uppercase');
+const lowercase = document.getElementById('lowercase');
+const numbers = document.getElementById('numbers');
+const quantity = document.getElementById('quantity');
+const length = document.getElementById('length');
+const numberOfPasswords = document.getElementById('pass-amount');
+
+
 function randomLetter(capital, lower, numbers, symbol) {
   let letters = "";
 
