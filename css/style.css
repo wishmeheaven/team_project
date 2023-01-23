@@ -11,19 +11,19 @@ body{
     background: grey;
     font-family: 'Poppins', sans-serif;
     display: block;
-    width: 40rem;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     min-height: fit-content;
     min-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .form{
     border-radius: 15px;
-    width: 80%;
-    /* height: max-content; */
-    margin: auto;
-    margin-top: 10%;
+    max-width: 30rem;
+    min-height: 30rem;
     text-align: center;
-    /* padding: 2rem 0rem; */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -52,17 +52,20 @@ input{
     height: 15%;
     height: 2em;
     font-family: 'poppins', sans-serif;
+    transition: all 0.2s linear;
 }
 input:hover {
     border: none;
     color: #fff;
-   background: linear-gradient(to bottom right, #010015, #6d2af2);
+   background: linear-gradient(to bottom right, #010015, #888888);
 }
 input:active {
 color: #fff;
 border:none;
- box-shadow: 0 0 20px 5px rgb(165, 100, 255);
-background: linear-gradient(to top left, #010015, #6d2af2);
+ box-shadow: 0 0 5px 5px #888888;
+background: linear-gradient(to top left, #010015, #7af162);
+transition: all 0.2s linear;
+
 }
 
 label{
@@ -86,7 +89,7 @@ input {
     font-size: 1.25em;
 }
 #gene-btn:active {
-   box-shadow: 0 0 35px 5px rgb(91, 255, 110);
+   box-shadow: 0 0 8px 2px rgb(91, 255, 110);
 background: linear-gradient(to right bottom, hsl(123, 100%, 73%), rgb(0, 255, 21));
 
 }
