@@ -80,7 +80,6 @@ function generatorPassword() {
   const symb = Number(symbols.value);
   const len = Number(lengthOfPass.value);
   const numOfPasswords = Number(numberOfPasswords.value);
-
   let pass = randomLetter(upper, lower, nums, symb);
   pass += generateExtraChars(len - pass.length);
   pass = mixString(pass);
