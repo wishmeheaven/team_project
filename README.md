@@ -25,7 +25,7 @@ passwords ranked are  -weak  -basic -strong  -best!
 if the user will go outside the paremeters of the form the app will display an error message with what went worng.
 
 #### App responsiveness
-We made sure that you the app is useable for smaller screens as well.
+We made sure that the app is useable for smaller screens as well.
 
 <br />
 
