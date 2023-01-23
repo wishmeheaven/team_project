@@ -7,7 +7,7 @@
 }
 
 body{
-    margin: 15rem auto;
+    margin: auto;
     background: grey;
     font-family: 'Poppins', sans-serif;
     display: block;
@@ -18,9 +18,8 @@ body{
 }
 .form{
     border-radius: 15px;
-    padding : 20px;
     width: 80%;
-    height: max-content;
+    /* height: max-content; */
     margin: auto;
     margin-top: 10%;
     text-align: center;
@@ -115,9 +114,11 @@ div input{
     border-radius: 30px;
     margin: auto;
     width: 90%;
-    height: 3em;
+    height: 100px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
 }
 
