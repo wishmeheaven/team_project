@@ -1,7 +1,7 @@
 # 🚀 Team Project - Passwords Generator
-we were given a task @AppleSeeds Bootcamp to make a Passwords Generator app while only using ```JavaScript```
+We were given a task @AppleSeeds Bootcamp to make a Passwords Generator app while only using ```JavaScript```
 
-We decided it is a bit simple for us and added ```HTML``` & ```CSS``` to make it more interesting
+and decided it is a bit simple for us and added ```HTML``` & ```CSS``` to make it more interesting
 
 <br />
 
