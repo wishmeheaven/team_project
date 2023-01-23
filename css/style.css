@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,12 +8,18 @@
 
 body{
     background: grey;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    width: 40rem;
+    height: 100%
+    min-height: fit-content;
+    min-width: fit-content;
 }
-form{
+.form{
+    border-radius: 15px;
     padding : 20px;
-    width: 25rem;
+    width: 80%;
     height: max-content;
-    background: #333;
     margin: auto;
     margin-top: 10%;
     text-align: center;
@@ -19,10 +27,14 @@ form{
     color: #fff;
     display: flex;
     flex-direction: column;
+     background: linear-gradient(to left bottom, #606060, #000000);
+
 }
 
 h1{
+    margin: auto;
     font-size: 30px;
+    font-weight: 600;
     padding: 2rem 0rem ;
 }
 
@@ -33,47 +45,79 @@ div{
     display: flex;
     flex-direction: row;
     padding: 0.5rem 1rem;
+    line-height: 2rem;
+}
+
+input{
+    width:10%;
+    height: 15%;
+    height: 2em;
+    font-family: 'poppins', sans-serif;
+}
+input:hover {
+    border: none;
+    color: #fff;
+   background: linear-gradient(to bottom right, #010015, #6d2af2);
+}
+input:active {
+        color: #fff;
+border:none;
+ box-shadow: 0 0 20px 5px rgb(165, 100, 255);
+background: linear-gradient(to top left, #010015, #6d2af2);
 }
 
 label{
     align-items: flex-start;
 }
 
-input{
+input {
     width: 60px;
     height: 20px;
     border-radius: 8px;
-    
 }
 
-button{
-    background: rgb(207, 232, 171) ;
-    width: 80%;
-    padding: 5px;
-    border-radius: 8px;
+#gene-btn {
+    background: linear-gradient(to right, #ff416c, #f64425);
+    border-radius: 30px;
+    margin: 30px auto 0.5em;
+    width: 90%;
+    height: 4em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25em;
 }
+#gene-btn:active {
+   box-shadow: 0 0 35px 5px rgb(91, 255, 110);
+background: linear-gradient(to right bottom, hsl(123, 100%, 73%), rgb(0, 255, 21));
 
+}
+.form div {
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
 div input{
     margin:auto;
     margin-right: 0px;
     padding: 10px;
-
+    height: 2.5em;
+    font-size: 1em;
+    font-weight: 600;
+    width: 15%;
+    border-radius: 20px;
 }
 
-#generate-btn{
-    width:80px;
-    padding: 5px;
+#pass-box {
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 10px 0 #fff;
+    border-radius: 30px;
     margin: auto;
-    background: grey;
-    color: #fff;
-}
-#pass-box{
-    width: 80%;
-    margin: auto;
-    padding: 10px;  
-    border-radius: 8px;
-    background: #fff;
-    color: #000;
-    text-align: center;
+    width: 90%;
+    height: 3em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25em;
 }
 

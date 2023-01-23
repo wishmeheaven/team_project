@@ -9,9 +9,8 @@
     <title>Password Generator</title>
   </head>
   <body>
-    <form action="form">
+    <div class="form">
         <h1>Password Generator</h1>
-        
         <div>
             <label for="quantity">How many Uppercase Letters:</label>
             <input type="number" id="uppercase" name="quantity" min="1" max="5">
@@ -38,8 +37,9 @@
             <label for="quantity">How many Passwords to generate:</label>
             <input type="number" id="pass-amount" name="pass-amount" min="8" max="12">
         </div>
-        <button id="gene-btn" class="button"  onClick="generatorPassword()">Generate Password</button>     
-        <div class="pass-box">
+        
+                <button id="gene-btn" class="button"  onClick="generatorPassword()">Generate Password</button>     
+                <div id="pass-box">        
         </div>
     </form>
       
