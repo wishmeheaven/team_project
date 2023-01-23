@@ -24,6 +24,8 @@ passwords ranked are  -weak  -basic -strong  -best!
 #### Password inputs validation checks
 if the user will go outside the paremeters of the form the app will display an error message with what went worng.
 
+#### App responsiveness
+We made sure that you the app is useable for smaller screens as well.
 
 <br />
 
@@ -38,11 +40,13 @@ https://password-generator-team-project.netlify.app/
 
 ## Screenshots
 
-![Alt text](assets/images/Screenshot1.png?raw=true "Title")
+![Alt text](images/screen-1.png?raw=true "Title") 
 
-![plot](./assets/images/Screenshot2.png)
+![plot](./images/screen-2.png) 
 
-![plot](./assets/images/Screenshot3.png)
+![plot](./images/screen-3.png) 
+
+![plot](./images/screen-4.png) 
 
 
 ## Deployment
