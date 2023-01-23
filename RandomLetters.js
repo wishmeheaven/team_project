@@ -40,5 +40,24 @@ function randomLetter(capital, lower, numbers, symbol) {
 }
 
 
-console.log(randomLetter(4, 4, 4, 4));
+
+const generateExtraChars = (length) => {
+  let result           = '';
+  let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*';
+  let charactersLength = characters.length;
+  for ( let i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+
+const mixString = (str) => {
+ str = str.split('').sort(() => {
+  return Math.floor(Math.random() * (5 - (-5)) + 5) -10;
+ }).join('');
+ return str; 
+}
+
+mixString('abcdefghij');//=
 
