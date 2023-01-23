@@ -6,20 +6,44 @@ const lengthOfPass = document.getElementById("length");
 const numberOfPasswords = document.getElementById("pass-amount");
 const passwordBox = document.getElementById("pass-box");
 
+let errorMsg ='';
+
 const minMost = 0;
 const minLen = 8;
 const maxMost = 5;
 const maxLen = 16;
 
+const getPassStrength = (passStr) => {
+  const powerArr=['Weak', 'Good', 'Strong', 'Best!'];
+  let power = 0;
+  if((/[A-Z]/).test(passStr) && (/[a-z]/).test(passStr)){
+    power++;
+    if((/[0-1]/).test(passStr)){
+      power++;
+    }
+  }
+  if((/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/).test){
+    power++;
+  }
+  return powerArr[power];
+}
+
 const isError = (arr, minMaxL, amountOfPass) => {
+  if(arr.reduce((acc,cur) => acc+cur ,0) > minMaxL){
+    errorMsg ='Too many chars!'
+    return true;
+  }
   if (amountOfPass < 1 || amountOfPass > 3) {
+    errorMsg = 'Only 1-3 passwords!'
     return true;
   }
   if (minMaxL < minLen || minMaxL > maxLen) {
+    errorMsg = 'Password length can only be 8-16!'
     return true;
   }
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < minMost || arr[i] > maxMost) {
+      errorMsg = 'Invalid amount in one/more parameters!'
       return true;
     }
     return false;
@@ -99,7 +123,7 @@ function generatorPassword() {
 
   if (isError([upper, lower, nums, symb], len, numOfPasswords)) {
     const errorP = document.createElement("p");
-    errorP.textContent = 'Error! bad input';
+    errorP.textContent = errorMsg;
     passwordBox.appendChild(errorP);
     return;
   }
@@ -109,7 +133,7 @@ function generatorPassword() {
     pass += generateExtraChars(len - pass.length);
     pass = mixString(pass);
     const newP = document.createElement("p");
-    newP.textContent = pass;
+    newP.textContent = pass + ' - ' + getPassStrength(pass);
     passwordBox.appendChild(newP);
   }
 }
