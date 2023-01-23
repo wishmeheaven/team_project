@@ -18,5 +18,3 @@ const mixString = (str) => {
    }).join('');
    return str; 
 }
-
-mixString('abcdefghij');//=
