@@ -12,7 +12,7 @@ const generateExtraChars = (length) => {
 }
 
 
-const mixString = (str) => {
+const git push –set-upstream origin = (str) => {
    str = str.split('').sort(() => {
     return Math.floor(Math.random() * (5 - (-5)) + 5) -10;
    }).join('');
