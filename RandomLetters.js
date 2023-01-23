@@ -6,7 +6,7 @@ const lengthOfPass = document.getElementById("length");
 const numberOfPasswords = document.getElementById("pass-amount");
 const passwordBox = document.getElementById("pass-box");
 
-const minMost = 1;
+const minMost = 0;
 const minLen = 8;
 const maxMost = 5;
 const maxLen = 12;
