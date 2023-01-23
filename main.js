@@ -62,14 +62,10 @@ const generateBtn = document.getElementById("gene-btn")
 const password = document.getElementById("pass-box")
 
 
-function generatorPassword(btn, password) {
+function generatorPassword(btn) {
 
     btn.addEventListener("click", () => {
 
-        for (let i = 0; i < length; i++) {
-            const random = Math.floor(Math.random() * chars.length);
-            password += chars.substring(random, random + 1);
-        }
 
         return password;
     })

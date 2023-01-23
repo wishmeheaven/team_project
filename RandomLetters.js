@@ -1,3 +1,11 @@
+const uppercase = document.getElementById('uppercase');
+const lowercase = document.getElementById('lowercase');
+const numbers = document.getElementById('numbers');
+const quantity = document.getElementById('quantity');
+const length = document.getElementById('length');
+const numberOfPasswords = document.getElementById('pass-amount');
+
+
 function randomLetter(capital, lower, numbers, symbol) {
   let letters = "";
 
@@ -6,7 +14,7 @@ function randomLetter(capital, lower, numbers, symbol) {
   // Create an array for uppercase letters
   const upperCaseArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   // Create an array for symbols
-  const symbolsArr = "!@#$%^&*()_+-=[]{}|;':\"<>,.?/\\".split("");
+  const symbolsArr = "!@#$%^&*_+-=|?".split("");
   // Create an array for numbers
   const numbersArr = "0123456789".split("");
 
@@ -40,4 +48,24 @@ function randomLetter(capital, lower, numbers, symbol) {
 }
 
 
-console.log(randomLetter(4, 4, 4, 4));
+
+const generateExtraChars = (length) => {
+  let result           = '';
+  let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*';
+  let charactersLength = characters.length;
+  for ( let i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+
+const mixString = (str) => {
+ str = str.split('').sort(() => {
+  return Math.floor(Math.random() * (5 - (-5)) + 5) -10;
+ }).join('');
+ return str; 
+}
+
+mixString('abcdefghij');//=
+
