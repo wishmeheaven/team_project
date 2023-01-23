@@ -6,7 +6,7 @@ function randomLetter(capital, lower, numbers, symbol) {
   // Create an array for uppercase letters
   const upperCaseArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   // Create an array for symbols
-  const symbolsArr = "!@#$%^&*()_+-=[]{}|;':\"<>,.?/\\".split("");
+  const symbolsArr = "!@#$%^&*_+-=[]{}|.?".split("");
   // Create an array for numbers
   const numbersArr = "0123456789".split("");
 
