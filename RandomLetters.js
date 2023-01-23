@@ -1,9 +1,14 @@
 const uppercase = document.getElementById('uppercase');
 const lowercase = document.getElementById('lowercase');
 const numbers = document.getElementById('numbers');
-const quantity = document.getElementById('quantity');
-const length = document.getElementById('length');
+const symbols = document.getElementById('quantity');
+const lengthOfPass = document.getElementById('length');
 const numberOfPasswords = document.getElementById('pass-amount');
+const passwordBox = document.getElementById("pass-box")
+
+
+
+
 
 
 function randomLetter(capital, lower, numbers, symbol) {
@@ -25,19 +30,19 @@ function randomLetter(capital, lower, numbers, symbol) {
     }
   }
   if (lower > 0) {
-    for (let i = 0; i < capital; i++) {
+    for (let i = 0; i < lower; i++) {
       letters += lowerCaseArr[Math.floor(Math.random() * lowerCaseArr.length)];
 
     }
   }
   if (numbers > 0) {
-    for (let i = 0; i < capital; i++) {
+    for (let i = 0; i < numbers; i++) {
       letters += numbersArr[Math.floor(Math.random() * numbersArr.length)];
 
     }
   }
   if (symbol > 0) {
-    for (let i = 0; i < capital; i++) {
+    for (let i = 0; i < symbol; i++) {
       letters += symbolsArr[Math.floor(Math.random() * symbolsArr.length)];
 
     }
@@ -67,5 +72,20 @@ const mixString = (str) => {
  return str; 
 }
 
-mixString('abcdefghij');//=
+
+function generatorPassword() {
+  const upper = Number(uppercase.value);
+  const lower = Number(lowercase.value);
+  const nums = Number(numbers.value);
+  const symb = Number(symbols.value);
+  const len = Number(lengthOfPass.value);
+  const numOfPasswords = Number(numberOfPasswords.value);
+
+  let pass = randomLetter(upper, lower, nums, symb);
+  pass += generateExtraChars(len - pass.length);
+  pass = mixString(pass);
+  const newP = document.createElement("p");
+  newP.textContent = pass;
+  passwordBox.appendChild(newP);
+}
 
